@@ -1,0 +1,85 @@
+<font face=Courier size=4 color=black>
+<body bgcolor=white ></body>
+<h2 align=center><u>ARRAYS BY BRANDON</u></h2><hr align=left>
+Make a 1D array that stores 6 fake students and then prints them to webpage.
+<br><br>
+<script>
+
+    document.myHuman = new Array(7)
+    
+    document.myHuman[0]='Tim'
+    document.myHuman[1]='Fred'
+    document.myHuman[2]='Bob'
+    document.myHuman[3]='Jim'
+    document.myHuman[4]='Robert'
+    document.myHuman[5]='James'
+    document.myHuman[6]='Angus'
+    
+    
+</script>
+
+
+
+
+<input type=button value="Show Array" onclick="{
+    document.getElementById('myDiv1').innerHTML = ''
+for (myLoop= 0; myLoop <=6; myLoop++){
+    document.getElementById('myDiv1').innerHTML += myLoop + document.myHuman[myLoop] + '<br>'
+}
+}">
+
+
+
+
+<div id="myDiv1"><br>Output Here</div>
+<hr>
+<br><button onclick="myFunction()">Sort Cars Alphabetically</button><br>
+
+<p id="button"></p>
+
+<script>
+
+     var myCars = ["Audi","Ford","Buick","BMW","Acura","Bentley","Bugatti","Aston Martin","Honda","Hyundai","Tesla","Toyota","Lamborghini","Koenigsegg"];
+     document.getElementById("button").innerHTML= myCars;
+
+    function myFunction() {
+    myCars.sort();
+    document.getElementById("button").innerHTML = myCars;
+}
+    function random(){
+    var myrandom=Math.round(Math.random()*4)
+    var link1="https://www.lamborghini.com/en-en/"
+    var link2="https://www.tesla.com/en_CA/"
+    var link3="http://www.bugatti.com/home/"
+    var link4="http://koenigsegg.com/"
+    var link5="http://www.ford.ca/"
+    var link6="http://www.bmw.ca/en/home.html"
+    if (myrandom==0)
+        window.location=link1
+    else if (myrandom==1)
+        window.location=link2
+    else if (myrandom==2)
+        window.location=link3
+    else if (myrandom==3)  
+        window.location=link4
+    else if (myrandom==4)  
+        window.location=link5
+    else if (myrandom==5)
+        window.location=link6
+}       
+    
+</script>
+<form>
+<hr>
+<br>Click the button to take you to a random webpage on cars!
+
+<br><br><input type="button" value="Random link" onClick="random()">
+
+</form>
+<hr>
+</font>
+
+
+
+
+

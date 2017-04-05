@@ -1,0 +1,91 @@
+
+
+<script>
+
+// set the object
+function myStudent(myAge, myName, myImg){
+   this.myStudentAge = myAge
+   this.myStudentName = myName
+   this.myStudentImage = myImg
+   this.myInfo = myStudentInfo
+}
+
+function myStudentInfo(){
+   document.getElementById('myDiv1').innerHTML += ' My name is ' + 
+       this.myStudentName + ' I am ' + this.myStudentAge +
+       ' years old. Here is my picture <br><img width=70 src =' + this.myStudentImage +
+       '><br><br>'
+}
+
+  
+</script>
+
+<input type=button value="Khaled Object" onclick="{
+   myKhaled = new myStudent(41, 'Khaled','http://www.billboard.com/files/styles/article_main_image/public/media/DJ-Khaled-press-photo-head-shot-2016-billboard-650.jpg' )
+   myKhaled.myInfo()
+}">
+
+<input type=button value="Trump Object" onclick="{
+   myTrump = new myStudent(70, 'Donald','https://libertyblitzkrieg.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-19-at-1.23.39-PM-300x287.jpg' )
+   myTrump.myInfo()
+}">
+
+<input type=button value="Kanye Object" onclick="{
+   myKanye = new myStudent(39, 'Kanye','http://c1.thejournal.ie/media/2013/12/65th-cannes-film-festival-cruel-summer-screening-6-310x415.jpg' )
+   myKanye.myInfo()
+}">
+
+<input type=button value="Drake Object" onclick="{
+   myDrake = new myStudent(30, 'Drake','http://o.aolcdn.com/dims-global/dims3/GLOB/resize/300x300%5E/crop/300x300/http://www.blogcdn.com/www.cambio.com/media/2013/05/drake-small.jpg' )
+   myDrake.myInfo()
+}">
+
+<input type=button value="Yachty Object" onclick="{
+   myYachty = new myStudent(19, 'Yachty','https://s3.amazonaws.com/hiphopdx-production/2016/11/Lil-Yachty-by-Mike-Lavin-@thehomelesspimp-800x600.jpg' )
+   myYachty.myInfo()
+}">
+<br><br>
+<input type=button value="Show Array" onclick="{
+    document.getElementById('myStudentInfo').innerHTML = ''
+for (myLoop= 0; myLoop <=5; myLoop++){
+    document.getElementById('myDiv1').innerHTML += myLoop + document.myPerson[myLoop] + '<br>'
+}
+}">
+
+
+
+<div id="myDiv1"></div>
+
+
+<script>
+   
+   myPerson = New Array(5)
+   
+   myPerson[0]= new myStudent(41,'Khaled','')
+   myPerson[1]= new myStudent(70,'Trump','')
+   myPerson[2]= new myStudent(39,'Kanye','')
+   myPerson[3]= new myStudent(30,'Drake','')
+   myPerson[4]= new myStudent(19,'Yachty','')
+   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
